@@ -170,7 +170,7 @@ function ListTasksBox() {
       
       {authCtx.tasks.length > 0 ? <div className=' h-1/6  py-2 px-3 w-full flex flex-col overflow-y-auto scrollsettings '>
             {authCtx.tasks.map((task, index) =>{
-              console.log(task.completed + " " + task.id)
+           
               if(task.completed)
                 return (<TaskBoxDone key={task.id} {...task}   onClickTaskDelete ={() => TaskDelete(index)}   ></TaskBoxDone>)
               if(task.isEditMode) 

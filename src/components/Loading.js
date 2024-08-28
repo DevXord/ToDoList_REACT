@@ -3,7 +3,7 @@
  
 function Loading({text = '',altImg, spinClassName, textClassName, showSpin=false ,...props}) {
     const bonceText = text.split('');
-        console.log(bonceText);
+       
     return (<> 
        {showSpin && <div className={`relative animate-spin ${spinClassName}`} >
 
@@ -19,7 +19,7 @@ function Loading({text = '',altImg, spinClassName, textClassName, showSpin=false
                 style={{ animationDelay: `${index * 0.1}s` }}  
                 >
                 {text === "_" ? " " : text}
-                {console.log(text)}
+         
                 </span>
             ))}
         </p>
