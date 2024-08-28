@@ -1,0 +1,96 @@
+{
+    "server_reset": "The server has been reset.",
+    "server_reset_error": "There was a problem resetting the server!",
+    "about_aplication": "This project is a simple ToDo List application built using React for the frontend and Django as the backend API. The user can add, delete, update, and mark tasks as completed, with all the business logic and data storage handled on the Django server side. The frontend communicates with the API through HTTP requests using Axios, allowing for dynamic real-time task management. The user interface in React is simple and intuitive, making the solution easy to use. The primary goal of the project was to develop and enhance the author's skills in working with modern web technologies such as React on the frontend and Django as the backend API. The ToDo List served as an ideal example for practicing communication between the frontend and backend, state management in React, and implementing advanced backend features with Django, such as data processing and API handling.",
+    "create_box":{
+        "add_box_icon_alt" : "Creating a new task",
+        "title": {
+            "place_holder" : "Title task",
+            "alt" : "Write title field"
+        },
+        "description": {
+            "place_holder" : "Description",
+            "alt" : "Write description field"
+        },
+        "add_button": {
+            "text" : "Add",
+            "alt" : "Add task button"
+        },
+        "toast":{
+            "error":{
+                "add_task": "Failed to add task!",
+                "valid": {
+                    "label": "Fields not completed: ",
+                    "title_message":" title,",
+                    "description_message":" description,",
+                    "dateCompleted_message":" date to completed,"
+
+                }
+            },
+            "success":{
+                "add_task":  "The task has been added." 
+              
+            }
+                
+        }
+
+
+     },
+      
+    "list_task_box":{
+        "loading": "loading...",
+        "task_id" : "Task ID ",
+        "list_is_empty": "The task list is empty",
+        "task_box": {
+             
+            "edit_button":{
+                "alt":"Editing a task"
+            },
+            "done_button":{
+                "alt":"Completion of the task"
+            },
+            "delete_button":{
+                "alt":"Deleting task"
+            },
+            "save_button":{
+                "alt":"Saving a task"
+            },
+            "cancel_button":{
+                "alt":"Canceling task"
+            }
+
+        },
+     
+        "toast":{
+            "error":{
+              
+                "download_task": "Failed to download tasks from the server!",
+                "edit_mode_is_on":  "Another task is already in edit mode!",
+                "task_update": "Failed to update the task!",
+                "task_delete": "Failed to delete the task!",
+                "task_completed": "Failed to mark the task as completed!" 
+            },
+            "success":{
+                "task_update": "The task has been updated.",
+                "task_delete": "The task has been deleted.",
+                "task_completed": "The task has been marked as completed."
+              
+            },
+            "warning":{
+                "one_task_must_change": "You must change the value of at least one field."
+            }
+            
+                
+        }
+
+
+     },
+     "header_and_footer":{
+        "link_task_alt":"Tasks",
+        "logo_alt": "Logo aplication",
+        "tasks_list_alt": "Tasks list",
+        "language_english_alt": "English flag",
+        "language_poland_alt": "Polish flag",
+        "used_technologies_label": "ToDo application created to develop skills in using technologies:"
+    }
+}

@@ -1,0 +1,98 @@
+{
+    "server_reset": "Serwer został zresetowany.",
+    "server_reset_error": "Wystąpił problem podczas resetowania serwera!",
+    "about_aplication": "Projekt ten to prosta aplikacja ToDo List stworzona przy użyciu React na frontendzie oraz Django jako backendowego API. Użytkownik może dodawać, usuwać, aktualizować i oznaczać zadania jako ukończone, a cała logika biznesowa i przechowywanie danych są obsługiwane po stronie serwera Django.Frontend komunikuje się z API za pomocą żądań HTTP z wykorzystaniem Axios, co pozwala na dynamiczne zarządzanie zadaniami w czasie rzeczywistym. Interfejs użytkownika w React jest prosty i intuicyjny, co ułatwia korzystanie z rozwiązania. Głównym celem projektu był rozwój i doskonalenie umiejętności autora w pracy z nowoczesnymi technologiami webowymi, takimi jak React na frontendzie oraz Django jako backendowe API. ToDo List posłużyła jako idealny przykład do ćwiczenia komunikacji pomiędzy frontendem i backendem, zarządzania stanem w React oraz wdrażania zaawansowanych funkcji backendowych z wykorzystaniem Django, takich jak przetwarzanie danych i obsługa API.",
+    "create_box":{
+        "add_box_icon_alt" : "Tworzenie nowego zadania",
+        "title": {
+            "place_holder" : "Tytuł zadania",
+            "alt" : "Wpisz tytuł zadania"
+        },
+        "description": {
+            "place_holder" : "Opis",
+            "alt" : "Wpisz pole opisu"
+        },
+        "add_button": {
+            "text" : "Dodaj",
+            "alt" : "Przycisk dodawania zadania"
+        },
+        "toast":{
+            "error":{
+                "add_task": "Nie udało się dodać zadania!",
+                "valid": {
+                    "label": "Nieuzupełnione pola: ",
+                    "title_message":" tytuł zadania,",
+                    "description_message":" opis,",
+                    "dateCompleted_message":" data zakończenia,"
+
+                }
+            },
+            "success":{
+                "add_task": "Zadanie zostało dodane." 
+              
+            }
+                
+        }
+
+
+     },
+      
+    "list_task_box":{
+        "loading": "ładowanie...",
+        "task_id" : "Identyfikator zadania ",
+        "list_is_empty": "Lista zadań jest pusta",
+        "task_box": {
+             
+            "edit_button":{
+                "alt":"Edytowanie zadania"
+            },
+            "done_button":{
+                "alt":"Zakończenie zadania"
+            },
+            "delete_button":{
+                "alt":"Usuwanie zadania"
+            },
+            "save_button":{
+                "alt":"Zapisywanie zadania"
+            },
+            "cancel_button":{
+                "alt":"Anulowanie zadania"
+            }
+
+        },
+     
+        "toast":{
+            "error":{
+               
+                "download_task": "Nie udało się pobrać zadań z serwera!",
+                "edit_mode_is_on":  "Inne zadanie jest już w trybie edycji!",
+                "task_update": "Nie udało się zaktualizować zadania!",
+                "task_delete": "Nie udało się usunąć zadania!",
+                "task_completed": "Nie udało się oznaczyć zadania jako ukończonego!" 
+            },
+            "success":{
+                "task_update": "Zadanie zostało zaktualizowane.",
+                "task_delete": "Zadanie zostało usunięte.",
+                "task_completed": "Zadanie zostało oznaczone jako wykonane."
+              
+            },
+            "warning":{
+                "one_task_must_change": "Musisz zmienić wartość przynajmniej jednego pola."
+            }
+            
+                
+        }
+
+
+    },
+    "header_and_footer":{
+        "link_task_alt":"Zadania",
+        "logo_alt": "Logo aplikacji",
+        "tasks_list_alt": "Lista zadań",
+        "language_english_alt": "Flaga Wielkiej Brytanii",
+        "language_poland_alt": "Flaga Polski",
+        "used_technologies_label": "Aplikacja ToDo stworzona w celu rozwijania umiejętności korzystania z technologii:"
+
+    }
+
+}

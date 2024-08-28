@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+
+
+ svg   {
+  -webkit-user-drag: none;  
+  -khtml-user-drag: none;   
+  -moz-user-drag: none;    
+  -o-user-drag: none;      
+  user-drag: none;        
+}
+
+.btn {
+    @apply cursor-pointer border-2 rounded-md uppercase items-center hover:bg-opacity-50 duration-200 ease-in-out;
+  }
+
+.link{
+  @apply  cursor-pointer uppercase font-bold justify-between items-center hover:opacity-65 duration-200 ease-in-out;
+ 
+
+}
+ 
+.scrollsettings{
+  scrollbar-width: 12px;
+  scroll-margin: 12px;
+ 
+  
+ 
+ 
+}
+textarea{
+  resize: none;
+}
+
+
+.loading-text {
+ 
+  letter-spacing: 2px;
+  
+}
+
+
+.bounceAnim {
+  display: inline-block;
+  margin-left: 10px;
+  animation: bounce 2s infinite; /* Animacja dla każdej litery */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Wyjściowa pozycja litery */
+  }
+  50% {
+    transform: translateY(-40px); /* Litera podskakuje w górę */
+  }
+}
