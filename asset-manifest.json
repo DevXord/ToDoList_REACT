@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/ToDoApp_REACT/static/css/main.5b31e8c2.css",
-    "main.js": "/ToDoApp_REACT/static/js/main.f1777d6f.js",
-    "static/js/453.d855a71b.chunk.js": "/ToDoApp_REACT/static/js/453.d855a71b.chunk.js",
-    "index.html": "/ToDoApp_REACT/index.html",
-    "static/media/AddCloudSVG.svg": "/ToDoApp_REACT/static/media/AddCloudSVG.79c423bb265cf2ee94d93774854e299c.svg",
-    "static/media/CancelSVG.svg": "/ToDoApp_REACT/static/media/CancelSVG.f68edb751820ef4c7a45b2ca5e56b6bc.svg",
-    "static/media/ListTaskSVG.svg": "/ToDoApp_REACT/static/media/ListTaskSVG.472d4304ea38e22d850155173e41430b.svg",
-    "static/media/AddTaskSVG.svg": "/ToDoApp_REACT/static/media/AddTaskSVG.03a2f3f3211e4dcc24cb5bc810d27844.svg",
-    "static/media/DoneSVG.svg": "/ToDoApp_REACT/static/media/DoneSVG.69c5bd8415f7f84c0d6694acf60e90c6.svg",
-    "static/media/SaveSVG.svg": "/ToDoApp_REACT/static/media/SaveSVG.d6ccfa3187664b95a866fa3b2e0431cf.svg",
-    "static/media/LogoAppSVG.svg": "/ToDoApp_REACT/static/media/LogoAppSVG.88889df9556ac19bba9085f0d764b30c.svg",
-    "static/media/DescriptionSVG.svg": "/ToDoApp_REACT/static/media/DescriptionSVG.c34604e92199c8e93c3a6827f60157af.svg",
-    "static/media/EditSVG.svg": "/ToDoApp_REACT/static/media/EditSVG.53895c6e080fa38b0b41e1f66ff02109.svg",
-    "static/media/DeleteSVG.svg": "/ToDoApp_REACT/static/media/DeleteSVG.257df24c891ef30517525f6f1d37f4b0.svg",
-    "static/media/TitleSVG.svg": "/ToDoApp_REACT/static/media/TitleSVG.5212b34458d58d197b1a6d1dc694cc4b.svg",
-    "main.5b31e8c2.css.map": "/ToDoApp_REACT/static/css/main.5b31e8c2.css.map",
-    "main.f1777d6f.js.map": "/ToDoApp_REACT/static/js/main.f1777d6f.js.map",
-    "453.d855a71b.chunk.js.map": "/ToDoApp_REACT/static/js/453.d855a71b.chunk.js.map"
+    "main.css": "/ToDoList_REACT/static/css/main.5b31e8c2.css",
+    "main.js": "/ToDoList_REACT/static/js/main.cfda6505.js",
+    "static/js/453.d855a71b.chunk.js": "/ToDoList_REACT/static/js/453.d855a71b.chunk.js",
+    "index.html": "/ToDoList_REACT/index.html",
+    "static/media/AddCloudSVG.svg": "/ToDoList_REACT/static/media/AddCloudSVG.79c423bb265cf2ee94d93774854e299c.svg",
+    "static/media/CancelSVG.svg": "/ToDoList_REACT/static/media/CancelSVG.f68edb751820ef4c7a45b2ca5e56b6bc.svg",
+    "static/media/ListTaskSVG.svg": "/ToDoList_REACT/static/media/ListTaskSVG.472d4304ea38e22d850155173e41430b.svg",
+    "static/media/AddTaskSVG.svg": "/ToDoList_REACT/static/media/AddTaskSVG.03a2f3f3211e4dcc24cb5bc810d27844.svg",
+    "static/media/DoneSVG.svg": "/ToDoList_REACT/static/media/DoneSVG.69c5bd8415f7f84c0d6694acf60e90c6.svg",
+    "static/media/SaveSVG.svg": "/ToDoList_REACT/static/media/SaveSVG.d6ccfa3187664b95a866fa3b2e0431cf.svg",
+    "static/media/LogoAppSVG.svg": "/ToDoList_REACT/static/media/LogoAppSVG.88889df9556ac19bba9085f0d764b30c.svg",
+    "static/media/DescriptionSVG.svg": "/ToDoList_REACT/static/media/DescriptionSVG.c34604e92199c8e93c3a6827f60157af.svg",
+    "static/media/EditSVG.svg": "/ToDoList_REACT/static/media/EditSVG.53895c6e080fa38b0b41e1f66ff02109.svg",
+    "static/media/DeleteSVG.svg": "/ToDoList_REACT/static/media/DeleteSVG.257df24c891ef30517525f6f1d37f4b0.svg",
+    "static/media/TitleSVG.svg": "/ToDoList_REACT/static/media/TitleSVG.5212b34458d58d197b1a6d1dc694cc4b.svg",
+    "main.5b31e8c2.css.map": "/ToDoList_REACT/static/css/main.5b31e8c2.css.map",
+    "main.cfda6505.js.map": "/ToDoList_REACT/static/js/main.cfda6505.js.map",
+    "453.d855a71b.chunk.js.map": "/ToDoList_REACT/static/js/453.d855a71b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5b31e8c2.css",
-    "static/js/main.f1777d6f.js"
+    "static/js/main.cfda6505.js"
   ]
 }
