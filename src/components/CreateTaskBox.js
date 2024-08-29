@@ -86,7 +86,7 @@ function CreateTaskBox() {
    
       await webApi.post("add-task/",data).then((r) => {
         ToastSuccess(t("create_box.toast.success.add_task"), 5000);
-        authCtx.setIsRealodTask(true);
+        authCtx.setIsRealodTask(true); 
      
       }).catch((err) => { 
         ToastError(t("create_box.toast.error.add_task"), 5000);
