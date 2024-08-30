@@ -87,11 +87,11 @@ function CreateTaskBox() {
       ToastError(t("toast.error.valid.label") + errorMessage.substring(0,errorMessage.length-1) + "!");
     
  
-    profanity_isValid = profanity.some(str =>  title.toLocaleLowerCase().includes(str.toLocaleLowerCase()) || description.toLocaleLowerCase().includes(str.toLocaleLowerCase())); 
+    profanity_isValid = !profanity.some(str =>  title.toLocaleLowerCase().includes(str.toLocaleLowerCase()) || description.toLocaleLowerCase().includes(str.toLocaleLowerCase())); 
    
     if(profanity_isValid){
       ToastError(t("toast.error.profanity"));
-      title_isValid = false;
+ 
     }
 
  

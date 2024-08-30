@@ -57,11 +57,11 @@ function TaskBoxEdit({id, title, description, completed, completed_at, createed_
       
 
           
-        profanity_isValid = profanity.some(str =>  newTitle.toLocaleLowerCase().includes(str.toLocaleLowerCase()) || newDescription.toLocaleLowerCase().includes(str.toLocaleLowerCase())); 
+        profanity_isValid = !profanity.some(str =>  newTitle.toLocaleLowerCase().includes(str.toLocaleLowerCase()) || newDescription.toLocaleLowerCase().includes(str.toLocaleLowerCase())); 
     
         if(profanity_isValid){
-        ToastError(t("toast.error.profanity"));
-        title_isValid = false;
+            ToastError(t("toast.error.profanity"));
+ 
         }
 
         return profanity_isValid && (title_isValid || description_isValid || completedAt_isValid);
