@@ -20,7 +20,7 @@
             "task_update": "Failed to update the task!",
             "task_delete": "Failed to delete the task!",
             "task_completed": "Failed to mark the task as completed!",
-           
+            "task_completed_from_future": "The task completion date must be in the future!",
             "profanity":"Fields contain prohibited vocabulary!"
 
         },

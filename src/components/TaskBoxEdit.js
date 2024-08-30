@@ -55,11 +55,16 @@ function TaskBoxEdit({id, title, description, completed, completed_at, createed_
         else
           completedAt_isValid = false;
       
-
+        if(new Date(newCompletedAt) >= Date.now())
+            completedAt_isValid = true;
+        else{
+            completedAt_isValid = false;
+            ToastError(t("toast.error.task_completed_from_future"));
+        }
           
         profanity_isValid = !profanity.some(str =>  newTitle.toLocaleLowerCase().includes(str.toLocaleLowerCase()) || newDescription.toLocaleLowerCase().includes(str.toLocaleLowerCase())); 
     
-        if(profanity_isValid){
+        if(!profanity_isValid){
             ToastError(t("toast.error.profanity"));
  
         }

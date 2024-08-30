@@ -20,6 +20,7 @@
                 "task_update": "Nie udało się zaktualizować zadania!",
                 "task_delete": "Nie udało się usunąć zadania!",
                 "task_completed": "Nie udało się oznaczyć zadania jako ukończonego!",
+                "task_completed_from_future": "Data zakończenia zadania musi przypadać w przyszłości!",
                 "profanity":"Pola zawiera zabronione słownictwo!" 
             },
             "success":{
