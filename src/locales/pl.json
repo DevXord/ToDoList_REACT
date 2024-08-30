@@ -2,6 +2,39 @@
     "server_reset": "Serwer został zresetowany.",
     "server_reset_error": "Wystąpił problem podczas resetowania serwera!",
     "about_aplication": "Ten projekt to prosta aplikacja z listą zadań do wykonania zbudowana przy użyciu React dla frontendu i Django jako API backendu. Użytkownik może dodawać, usuwać, aktualizować i oznaczać zadania jako zakończone. Frontend komunikuje się z API poprzez żądania HTTP wykorzystując Axios, umożliwiając dynamiczne zarządzanie zadaniami w czasie rzeczywistym. Interfejs użytkownika jest prosty i intuicyjny, dzięki czemu rozwiązanie jest łatwe w użyciu i w pełni responsywne. Podstawowym celem projektu był rozwój i doskonalenie umiejętności autora w zakresie pracy z nowoczesnymi technologiami webowymi takimi jak React na frontendzie oraz Django jako backendowe API. Lista ToDo posłużyła jako idealny przykład ćwiczenia komunikacji frontend-backend, zarządzania stanem w React i wdrażania zaawansowanych funkcji backendu w Django, takich jak przetwarzanie danych i obsługa API.",
+    "censorship_of_profanity_pl":"gówno, gówna, gówniane, gówniara, gówniarz, dupy, dupie, dupy, dupczy, dupnąć, dupiasty, dupa, dupci, dupcia, dupoliz, dymać, dyma, dymał, dymała, dziwka, dziwki, fiut, fiuty, frajer, frajerzy, gówniany, pierdolę, pierdoli, pierdolony, pierdolnik, pierdolnę, jebać, jebał, jebana, jebani, jebany, kurwa, kurwy, kutas, kutasy, łupać, łupał, łupała, jebca, opierdalać, osrać, osrany, pierdolić, piczka, piczki, pizda, pizdy, posuwać, posuwał, posuwała, przelecieć, przeleciał, przeleciała, przejebane, przejebany, ruchać, ruchał, ruchała, sraka, sraki, srak, suka, suki, skurwysyn, skurwysyny, skurwysynów, spierdolić, spierdolił, zajebać, zajebał, zajebany, zjebany, zjebani, zjebana, cipa, chuj, huj",
+    "censorship_of_profanity_en":"shit, shitty, ass, fuck, fucked, fucker, whore, whores, dick, dicks, cunt, cunts, cock, cocks, motherfucker, motherfuckers, pussy, pussies, asshole, assholes, bastard, slut, slutty, jerk-off, shithead, fucked-up, bitch, prick, twat, douche, douchebag, bollocks, wanker, tits, shitface, cocksucker, piss off, dipshit, dick, cock",
+   
+    "toast":{
+            "error":{
+                "add_task": "Nie udało się dodać zadania!",
+                "valid": {
+                    "label": "Nieuzupełnione pola: ",
+                    "title_message":" tytuł zadania,",
+                    "description_message":" opis,",
+                    "dateCompleted_message":" data zakończenia,"
+
+                },
+                "download_task": "Nie udało się pobrać zadań z serwera!",
+                "edit_mode_is_on":  "Inne zadanie jest już w trybie edycji!",
+                "task_update": "Nie udało się zaktualizować zadania!",
+                "task_delete": "Nie udało się usunąć zadania!",
+                "task_completed": "Nie udało się oznaczyć zadania jako ukończonego!",
+                "profanity":"Pola zawiera zabronione słownictwo!" 
+            },
+            "success":{
+                "add_task": "Zadanie zostało dodane.",
+                "task_update": "Zadanie zostało zaktualizowane.",
+                "task_delete": "Zadanie zostało usunięte.",
+                "task_completed": "Zadanie zostało oznaczone jako wykonane."
+              
+            },
+            "warning":{
+                "one_task_must_change": "Musisz zmienić wartość przynajmniej jednego pola.",
+                "description_too_short": "Opis jest za krótki.",
+                "title_too_short": "Tytuł jest za krótki."
+            } 
+    },
     "create_box":{
         "add_box_icon_alt" : "Tworzenie nowego zadania",
         "title": {
@@ -15,28 +48,8 @@
         "add_button": {
             "text" : "Dodaj",
             "alt" : "Przycisk dodawania zadania"
-        },
-        "toast":{
-            "error":{
-                "add_task": "Nie udało się dodać zadania!",
-                "valid": {
-                    "label": "Nieuzupełnione pola: ",
-                    "title_message":" tytuł zadania,",
-                    "description_message":" opis,",
-                    "dateCompleted_message":" data zakończenia,"
-
-                }
-            },
-            "success":{
-                "add_task": "Zadanie zostało dodane." 
-              
-            }
-                
-        }
-
-
-     },
-      
+        }  
+     }, 
     "list_task_box":{
         "loading": "ładowanie...",
         "task_id" : "Identyfikator zadania ",
@@ -59,31 +72,7 @@
                 "alt":"Anulowanie zadania"
             }
 
-        },
-     
-        "toast":{
-            "error":{
-               
-                "download_task": "Nie udało się pobrać zadań z serwera!",
-                "edit_mode_is_on":  "Inne zadanie jest już w trybie edycji!",
-                "task_update": "Nie udało się zaktualizować zadania!",
-                "task_delete": "Nie udało się usunąć zadania!",
-                "task_completed": "Nie udało się oznaczyć zadania jako ukończonego!" 
-            },
-            "success":{
-                "task_update": "Zadanie zostało zaktualizowane.",
-                "task_delete": "Zadanie zostało usunięte.",
-                "task_completed": "Zadanie zostało oznaczone jako wykonane."
-              
-            },
-            "warning":{
-                "one_task_must_change": "Musisz zmienić wartość przynajmniej jednego pola."
-            }
-            
-                
-        }
-
-
+        } 
     },
     "header_and_footer":{
         "link_task_alt":"Zadania",

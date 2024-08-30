@@ -1,6 +1,5 @@
  import { 
-    NavLink,
-    useLocation,
+    NavLink, 
   } from "react-router-dom";
 
 import ListTaskSVG from "../assets/images/ListTaskSVG.svg"
@@ -12,8 +11,7 @@ import { useContextAuthTask } from "../store/task-content";
  
  
 function Header() {
-  const { t  } = useTranslation();   
-  const location = useLocation()
+  const { t  } = useTranslation();    
   const authCtx = useContextAuthTask();
 
   const  changeLang = (lng) =>{

@@ -2,6 +2,40 @@
     "server_reset": "The server has been reset.",
     "server_reset_error": "There was a problem resetting the server!",
     "about_aplication": "This project is a simple to-do list app built using React for the frontend and Django as the backend API. The user can add, remove, update and mark tasks as completed. The frontend communicates with the API via HTTP requests using Axios, allowing dynamic task management in real time. The user interface is simple and intuitive, making the solution easy to use and fully responsive. The primary goal of the project was to develop and improve the author's skills in working with modern web technologies such as React on the frontend and Django as a backend API. The ToDo list served as an ideal example for practicing frontend-backend communication, state management in React, and implementing advanced backend features with Django such as data processing and API support.",
+    "censorship_of_profanity_pl":"gówno, gówna, gówniane, gówniara, gówniarz, dupy, dupie, dupy, dupczy, dupnąć, dupiasty, dupa, dupci, dupcia, dupoliz, dymać, dyma, dymał, dymała, dziwka, dziwki, fiut, fiuty, frajer, frajerzy, gówniany, pierdolę, pierdoli, pierdolony, pierdolnik, pierdolnę, jebać, jebał, jebana, jebani, jebany, kurwa, kurwy, kutas, kutasy, łupać, łupał, łupała, jebca, opierdalać, osrać, osrany, pierdolić, piczka, piczki, pizda, pizdy, posuwać, posuwał, posuwała, przelecieć, przeleciał, przeleciała, przejebane, przejebany, ruchać, ruchał, ruchała, sraka, sraki, srak, suka, suki, skurwysyn, skurwysyny, skurwysynów, spierdolić, spierdolił, zajebać, zajebał, zajebany, zjebany, zjebani, zjebana",
+    "censorship_of_profanity_en":"shit, shitty, ass, fuck, fucked, fucker, whore, whores, dick, dicks, cunt, cunts, cock, cocks, motherfucker, motherfuckers, pussy, pussies, asshole, assholes, bastard, slut, slutty, jerk-off, shithead, fucked-up, bitch, prick, twat, douche, douchebag, bollocks, wanker, tits, shitface, cocksucker, piss off, dipshit",
+    
+    "toast":{
+        "error":{
+            "add_task": "Failed to add task!",
+            "valid": {
+                "label": "Fields not completed: ",
+                "title_message":" title,",
+                "description_message":" description,",
+                "dateCompleted_message":" date to completed,"
+
+            },
+            "download_task": "Failed to download tasks from the server!",
+            "edit_mode_is_on":  "Another task is already in edit mode!",
+            "task_update": "Failed to update the task!",
+            "task_delete": "Failed to delete the task!",
+            "task_completed": "Failed to mark the task as completed!",
+           
+            "profanity":"Fields contain prohibited vocabulary!"
+
+        },
+        "success":{
+            "add_task":  "The task has been added.",
+            "task_update": "The task has been updated.",
+            "task_delete": "The task has been deleted.",
+            "task_completed": "The task has been marked as completed."
+        }, 
+       "warning":{
+            "one_task_must_change": "You must change the value of at least one field.",
+            "description_too_short": "The description is too short.",
+            "title_too_short": "The title is too short."
+        }  
+    },
     "create_box":{
         "add_box_icon_alt" : "Creating a new task",
         "title": {
@@ -15,24 +49,8 @@
         "add_button": {
             "text" : "Add",
             "alt" : "Add task button"
-        },
-        "toast":{
-            "error":{
-                "add_task": "Failed to add task!",
-                "valid": {
-                    "label": "Fields not completed: ",
-                    "title_message":" title,",
-                    "description_message":" description,",
-                    "dateCompleted_message":" date to completed,"
-
-                }
-            },
-            "success":{
-                "add_task":  "The task has been added." 
-              
-            }
-                
-        }
+        } 
+       
 
 
      },
@@ -59,31 +77,7 @@
                 "alt":"Canceling task"
             }
 
-        },
-     
-        "toast":{
-            "error":{
-              
-                "download_task": "Failed to download tasks from the server!",
-                "edit_mode_is_on":  "Another task is already in edit mode!",
-                "task_update": "Failed to update the task!",
-                "task_delete": "Failed to delete the task!",
-                "task_completed": "Failed to mark the task as completed!" 
-            },
-            "success":{
-                "task_update": "The task has been updated.",
-                "task_delete": "The task has been deleted.",
-                "task_completed": "The task has been marked as completed."
-              
-            },
-            "warning":{
-                "one_task_must_change": "You must change the value of at least one field."
-            }
-            
-                
-        }
-
-
+        }  
      },
      "header_and_footer":{
         "link_task_alt":"Tasks",

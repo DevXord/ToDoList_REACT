@@ -1,6 +1,7 @@
  
+ 
 import './App.css'; 
-import AuthContextTaskProvider    from './store/task-content';
+import AuthContextTaskProvider     from './store/task-content';
  
 import { router } from './util/router';
  

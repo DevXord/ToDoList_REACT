@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 
 import { Outlet }  from "react-router-dom";
+import { useContextAuthTask } from '../store/task-content';
  
-export default function RootLayouts() {
+
+
+function RootLayouts() {
+  const authCtx = useContextAuthTask();
+
+ 
+  useEffect(() => {
+    const load = () => {
+ 
+      authCtx.loadLanguage();
+    }
+    load();
+  } )
+  
 
   return (
 
@@ -21,3 +35,5 @@ export default function RootLayouts() {
   
   )
 }
+
+export default RootLayouts;

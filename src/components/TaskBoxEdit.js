@@ -7,7 +7,7 @@ import CancelSVG from '../assets/images/CancelSVG.svg'
 import { useState } from "react";
 import InputBox from "./InputBox";
 import DatePicker from "react-datepicker";
-import {  ToastWarning } from "../util/toast";
+import {  ToastError,  ToastWarning } from "../util/toast";
 import { useTranslation } from "react-i18next";
 import { useContextAuthTask } from "../store/task-content";
  
@@ -21,17 +21,34 @@ function TaskBoxEdit({id, title, description, completed, completed_at, createed_
     const { t  } = useTranslation();  
 
     const isValidateFields =  () => {
-        var title_isValid = true, description_isValid = true, completedAt_isValid = true;
-     
+        var title_isValid = true, description_isValid = true, completedAt_isValid = true,  profanity_isValid = true; 
+ 
+        var profanity = [...t("censorship_of_profanity_en").split(', '), ...t("censorship_of_profanity_pl").split(', ')]
+    
         if(newTitle !== title)
           title_isValid = true;
         else
           title_isValid = false;
 
+          if(newTitle.length > 5)
+            title_isValid = true;
+          else{
+            title_isValid = false;
+            ToastWarning(t("toast.warning.title_too_short"));
+          }
+
+
         if(newDescription !== description)
           description_isValid = true;
         else
           description_isValid = false;
+
+        if(newDescription.length > 5)
+            title_isValid = true;
+          else{
+            title_isValid = false;
+            ToastWarning(t("toast.warning.description_too_short"));
+          }
     
         if(newCompletedAt !== completed_at)
           completedAt_isValid = true;
@@ -39,7 +56,15 @@ function TaskBoxEdit({id, title, description, completed, completed_at, createed_
           completedAt_isValid = false;
       
 
-        return title_isValid || description_isValid || completedAt_isValid;
+          
+        profanity_isValid = profanity.some(str =>  newTitle.toLocaleLowerCase().includes(str.toLocaleLowerCase()) || newDescription.toLocaleLowerCase().includes(str.toLocaleLowerCase())); 
+    
+        if(profanity_isValid){
+        ToastError(t("toast.error.profanity"));
+        title_isValid = false;
+        }
+
+        return profanity_isValid && (title_isValid || description_isValid || completedAt_isValid);
       }
 
      const SaveTask = () =>{
@@ -54,7 +79,7 @@ function TaskBoxEdit({id, title, description, completed, completed_at, createed_
         if(isValidateFields())
             onClickTaskEditSave(newTask)
         else
-            ToastWarning(t("list_task_box.toast.warning.one_task_must_change"))
+            ToastWarning(t("toast.warning.one_task_must_change"))
        
              
         

@@ -22,7 +22,7 @@ function ListTasksBox() {
  
 
   const TaskEditMode = (index) => {
-    if(isTasksInEditMode) return ToastWarning(t("list_task_box.toast.error.edit_mode_is_on"))
+    if(isTasksInEditMode) return ToastWarning(t("toast.error.edit_mode_is_on"))
 
     const task = authCtx.tasks[index];
     task.isEditMode = true;
@@ -53,12 +53,12 @@ function ListTasksBox() {
     }
     setLoading(true);
     await webApi.put(`tasks/${task.id}/update-task/`,data).then((r) => {
-      ToastSuccess( t("list_task_box.toast.success.task_update"), 5000);
+      ToastSuccess( t("toast.success.task_update"), 5000);
     
 
 
     }).catch((err) => { 
-      ToastError(t("list_task_box.toast.error.task_update"), 5000);
+      ToastError(t("toast.error.task_update"), 5000);
        
       console.error(err)
     });
@@ -78,10 +78,10 @@ function ListTasksBox() {
   
     setLoading(true);
     await webApi.delete(`tasks/${task.id}/delete-task/`).then((r) => {
-        ToastSuccess( t("list_task_box.toast.success.task_delete"), 5000);
+        ToastSuccess( t("toast.success.task_delete"), 5000);
         
       }).catch((err) => { 
-        ToastError(t("list_task_box.toast.error.task_delete"), 5000);
+        ToastError(t("toast.error.task_delete"), 5000);
         console.error(err)
       });
       setLoading(false);
@@ -104,10 +104,10 @@ function ListTasksBox() {
     setLoading(true);
     await webApi.put(`tasks/${task.id}/update-task/`, data
     ).then((r) => {
-      ToastSuccess(t("list_task_box.toast.success.task_completed"), 5000);
+      ToastSuccess(t("toast.success.task_completed"), 5000);
       
     }).catch((err) => { 
-      ToastError(t("list_task_box.toast.error.task_completed"), 5000);
+      ToastError(t("toast.error.task_completed"), 5000);
       console.error(err)
     });
     setLoading(false);
@@ -143,7 +143,7 @@ function ListTasksBox() {
         authCtx.setTasks(newTasks);
 
       }).catch((err) => { 
-        ToastError(t("list_task_box.toast.error.download_task"), 5000);
+        ToastError(t("toast.error.download_task"), 5000);
        
         console.error(err)
       });

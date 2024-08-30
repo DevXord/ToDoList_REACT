@@ -8,7 +8,7 @@ import ButtonM from './ButtonM'
 import DatePicker from 'react-datepicker';
  
 import { webApi } from "../services/webApi"
-import { ToastError, ToastSuccess } from '../util/toast';
+import { ToastError, ToastSuccess, ToastWarning } from '../util/toast';
 
 import AddCloudSVG from '../assets/images/AddCloudSVG.svg'
 import AddTaskSVG from '../assets/images/AddTaskSVG.svg'
@@ -28,6 +28,7 @@ function CreateTaskBox() {
  
   const authCtx = useContextAuthTask();
   const { t  } = useTranslation(); 
+ 
 
   const ClearFields = () => {
     setTile('');
@@ -39,21 +40,40 @@ function CreateTaskBox() {
   
 
   const isValidateFields =  () =>{
-    var title_isValid = true, description_isValid = true, completedAt_isValid = true;
+    var title_isValid = true, description_isValid = true, completedAt_isValid = true, profanity_isValid = true;
+ 
     var errorMessage = '';
+    var profanity = [...t("censorship_of_profanity_en").split(', '), ...t("censorship_of_profanity_pl").split(', ')]
+    
     if(title){
       title_isValid = true;
     }
     else{
       title_isValid = false;
-      errorMessage += t("create_box.toast.error.valid.title_message");
+      errorMessage += t("toast.error.valid.title_message");
     }
+
+    if(title.length > 5)
+      title_isValid = true;
+    else{
+      title_isValid = false;
+      ToastWarning(t("toast.warning.title_too_short"));
+    }
+
+
     if(description){
       description_isValid = true;
     }
     else{
       description_isValid = false;
-      errorMessage += t("create_box.toast.error.valid.description_message");
+      errorMessage += t("toast.error.valid.description_message");
+    }
+
+    if(description.length > 5)
+      title_isValid = true;
+    else{
+      title_isValid = false;
+      ToastWarning(t("toast.warning.description_too_short"));
     }
 
     if(new Date(completedAt).getDate() !== new Date('1.1.1800').getDate()){
@@ -61,13 +81,22 @@ function CreateTaskBox() {
     }
     else{
       completedAt_isValid = false;
-      errorMessage +=  t("create_box.toast.error.valid.dateCompleted_message");
+      errorMessage +=  t("toast.error.valid.dateCompleted_message");
     }
     if(errorMessage)
-      ToastError(t("create_box.toast.error.valid.label") + errorMessage.substring(0,errorMessage.length-1) + "!");
+      ToastError(t("toast.error.valid.label") + errorMessage.substring(0,errorMessage.length-1) + "!");
     
+ 
+    profanity_isValid = profanity.some(str =>  title.toLocaleLowerCase().includes(str.toLocaleLowerCase()) || description.toLocaleLowerCase().includes(str.toLocaleLowerCase())); 
+   
+    if(profanity_isValid){
+      ToastError(t("toast.error.profanity"));
+      title_isValid = false;
+    }
 
-    return title_isValid && description_isValid && completedAt_isValid;
+ 
+
+    return profanity_isValid && title_isValid && description_isValid && completedAt_isValid;
   }
 
   const AddTask = async () =>{
@@ -85,11 +114,11 @@ function CreateTaskBox() {
       }
    
       await webApi.post("add-task/",data).then((r) => {
-        ToastSuccess(t("create_box.toast.success.add_task"), 5000);
+        ToastSuccess(t("toast.success.add_task"), 5000);
         authCtx.setIsRealodTask(true); 
      
       }).catch((err) => { 
-        ToastError(t("create_box.toast.error.add_task"), 5000);
+        ToastError(t("toast.error.add_task"), 5000); 
         console.error(err)
       });
 
@@ -142,7 +171,8 @@ function CreateTaskBox() {
           calendarClassName="bg-white border  border-gray-300 rounded-lg shadow-lg "
           calendarIconClassName='h-10 w-10 -top-4 -left-4 text-black absolute bg-white rounded-lg'
           locale={authCtx.language === "en" ? "en" : "pl"}
-          /> }
+          
+          /> }  
         </div>
            <ButtonM onClick={AddTask} 
            isLoading={loading}  
